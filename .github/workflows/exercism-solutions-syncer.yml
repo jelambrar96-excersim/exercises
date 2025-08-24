@@ -14,21 +14,16 @@ permissions:
 
 jobs:
   auto-merge:
-    if: github.base_ref == 'main' && (github.actor == 'exercism-solutions-syncer' || github.actor == 'jelambrar96') 
+    # Only run if the PR is targeting main AND the actor is jelambrar96 or exercism-solutions-syncer
+    if: github.base_ref == 'main' && (github.actor == 'jelambrar96' || github.actor == 'exercism-solutions-syncer')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Enable auto-merge for PR
-        uses: jelambrar96-excersim/exercises
-        with:
-          merge-method: squash
-          pull-request-number: ${{ github.event.pull_request.number }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Merge PR immediately
-        run: gh pr merge ${{ github.event.pull_request.number }} --merge --admin
+      # Use official gh CLI to enable auto-merge and merge PR
+      - name: Enable auto-merge
+        run: |
+          gh pr merge ${{ github.event.pull_request.number }} --merge --admin --repo jelambrar96-excersim/exercises
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
