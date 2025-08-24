@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Enable auto-merge for PR
-        uses: peter-evans/enable-pull-request-merge@v3
+        uses: jelambrar96-excersim/exercises@v3
         with:
           merge-method: squash
           pull-request-number: ${{ github.event.pull_request.number }}
