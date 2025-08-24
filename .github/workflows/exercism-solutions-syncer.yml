@@ -15,7 +15,7 @@ permissions:
 jobs:
   auto-merge:
     # Only run if the PR is targeting main AND the actor is jelambrar96 or exercism-solutions-syncer
-    if: github.base_ref == 'main' && (github.actor == 'jelambrar96' || github.actor == 'exercism-solutions-syncer')
+    if: github.base_ref == 'main' # && (github.actor == 'jelambrar96' || github.actor == 'exercism-solutions-syncer')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
