@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   auto-merge:
-    if: github.base_ref == 'main' && github.actor == 'exercism-solutions-syncer'
+    if: github.base_ref == 'main' && (github.actor == 'exercism-solutions-syncer' || github.actor == 'jelambrar96') 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
