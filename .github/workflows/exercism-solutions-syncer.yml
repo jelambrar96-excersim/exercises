@@ -27,3 +27,12 @@ jobs:
           gh pr merge ${{ github.event.pull_request.number }} --merge --admin --repo jelambrar96-excersim/exercises
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Delete PR branch after merge
+        if: ${{ github.event.pull_request.head.ref != 'main' }}
+        run: |
+          gh api \
+            -X DELETE \
+            "repos/jelambrar96-excersim/exercises/git/refs/heads/${{ github.event.pull_request.head.ref }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
