@@ -1,6 +1,6 @@
 # 📚 Exercism Solutions Sync
 
-Welcome to my public backup of solutions from [Exercism Profile](https://exercism.org/profiles/jelambrar96)!  
+Welcome to my public backup of solutions from [Exercism](https://exercism.org/profiles/jelambrar96)!  
 This repository is automatically synced with my Exercism profile, ensuring that all my coding exercises and solutions are safely stored and easily accessible.
 
 ---
@@ -53,9 +53,6 @@ Want to set up your own sync?
 Happy coding! 🚀
 ______ 
 
-<p align="center">
-<a href="https://github.com/jelambrar96">
-  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=jelambrar96&show_icons=true&theme=algolia&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=jelambrar96&layout=compact&langs_count=8&theme=algolia"/>
-</a>
-</p>
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/jelambrar1)
+
+Made with Love ❤️ by [@jelambrar96](https://github.com/jelambrar96)
